@@ -15,7 +15,7 @@ try {
 } catch (err) {
   console.error(err);
 }
-mongoose.connect(process.env['u'], { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env['DB_CONNECTION_STRING'], { useNewUrlParser: true, useUnifiedTopology: true });
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: { type: String, required: true }
